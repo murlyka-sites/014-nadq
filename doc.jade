@@ -1,0 +1,41 @@
+doctype html
+html
+	head
+		include jade/head.jade
+		title Документы
+	body
+		.container
+			.row
+				.wrapper.clearfix
+					include jade/header.jade
+					.clearfix
+						.wrapper__flex
+							.col-xs-12.col-md-9.wrapper__flex-row.wrapper__flex-row_order_1
+								.wrapper__main
+									include jade/doc.jade
+							.col-xs-12.col-md-3.wrapper__flex-row
+								.wrapper__aside.aside.clearfix
+									h3.aside__title
+										| Разделы библиотеки
+									.aside-tree
+										.aside-tree__item
+											a.aside-tree__link(href="#")
+												| Профессиональные стандарты
+											.aside-tree__subtree.aside-tree__subtree_open
+												.aside-tree__subitem
+													a(href="#")
+														| Документы
+												.aside-tree__subitem
+													a(href="#")
+														| Нормативное обеспечение
+												.aside-tree__subitem
+													a(href="#")
+														| Методическое обеспечение
+										.aside-tree__item
+											a.aside-tree__link(href="#")
+												| Профессионально-общественная аккредитация
+										.aside-tree__item
+											a.aside-tree__link(href="#")
+												| Независимая оценка квалификаций
+					include jade/foo.jade
+		include jade/scripts.jade

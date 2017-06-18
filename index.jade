@@ -1,0 +1,200 @@
+doctype html
+html
+	head
+		include jade/head.jade
+		title Главная
+	body
+		.container
+			.row
+				.wrapper.clearfix
+					include jade/header.jade
+					.clearfix.wrapper__flex
+						
+						.col-xs-12.col-md-9.wrapper__flex-row.wrapper__flex-row_order_1
+							.wrapper__main
+								include jade/search.jade
+								include jade/index.jade
+								include jade/serv.jade
+						.col-xs-12.col-md-3.wrapper__flex-row
+							.wrapper__aside.aside.clearfix
+								.aside-courses
+									h3.aside-courses__title
+										| Запись на курсы
+									.aside-courses__field
+										.aside-courses__label
+											| Программа обучения
+										select.select.aside-courses__block
+											option(selected, disabled)
+												| Выберите курс
+											option
+												| ...
+									.aside-courses__field
+										.aside-courses__label
+											| ФИО
+										input.input.aside-courses__block
+									.aside-courses__field
+										.aside-courses__label
+											| Название организации
+										input.input.aside-courses__block
+									.aside-courses__field
+										.aside-courses__label
+											| Контактный телефон
+										input.input.aside-courses__block
+									.aside-courses__field
+										.aside-courses__label
+											| Электронная почта
+										input.input.aside-courses__block
+									button.button.button_scheme_red.button_scheme_red-reverse.aside-courses__submit.aside-courses__block
+										| Отправить заявку
+
+				.wrapper.clearfix
+					.main-1
+						h2.main-1__title
+							| Профессиональные стандарты 
+							br
+							| и квалификации
+						.main-1__links
+							a(href="#")
+								| Документы
+							br
+							a(href="#")
+								| Справочник профессий
+							br
+							a(href="#")
+								| Обучение разработчиков
+					.main-2
+						.clearfix
+							h2.main-2__title
+								| Профессионально-общественная
+								br
+								| аккредитация
+						.clearfix
+							.main-2__links
+								a(href="#")
+									| Документы
+								br
+								a(href="#")
+									| Организации
+								br
+								a(href="#")
+									| Как стать центром аккредитации
+					.main-3
+						h2.main-3__title
+							| Независимая оценка квалификаций
+						.main-3__links
+							a(href="#")
+								| Документы
+							br
+							a(href="#")
+								| Организации
+							br
+							a(href="#")
+								| Библиотека
+					.main-4
+						h2.main-4__title
+							| Базовый центр профессиональной подготовки,
+							br
+							|  переподготовки и повышения квалификации
+							br
+							|  рабочих кадров 
+						.main-4__links
+							a(href="#")
+								| О центре
+							br
+							a(href="#")
+								| Документы
+							br
+							a(href="#")
+								| Контактная информация
+					.maps
+						h2.maps__title
+							| Региональное развитие 
+							br
+							| Национальной системы квалификаций
+						.maps__buttons
+
+							select.select.maps__select
+								option(selected, disabled)
+									| Выберите отрасль
+								option
+									| 123
+							button.button.maps__button-main
+								| Искать
+						.maps__container
+							script(type="text/javascript", charset="utf-8", async, src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=7o2bN6HiW6iy4cMomc6cWRhABqfiz0Ym&amp;width=100%25&amp;height=675&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+						.maps__buttons-2
+							a.button.button_scheme_red.button_size_xs.maps__button(href="#")
+								| ЦОК
+							a.button.button_scheme_red.button_scheme_red-reverse.button_size_xs.maps__button(href="#")
+								| СПК
+							a.button.button_scheme_red.button_scheme_red-reverse.button_size_xs.maps__button(href="#")
+								| РМЦ
+							a.button.button_scheme_red.button_scheme_red-reverse.button_size_lg.maps__button(href="#")
+								| Аккредитующие организации
+							select.select.select_scheme_red.maps__select-280.maps__button
+								option(selected, disabled)
+									| Выберите регион
+								option
+									| -
+					.logos
+						.clearfix
+							.col-xs-12
+								h2.logos__title
+									| Учредители
+						.clearfix
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-1.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-2.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-1.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-2.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-1.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-2.png", alt="")
+					.logos.logos-2
+						.clearfix
+							.col-xs-12
+								h2.logos__title
+									| Партнеры
+						.clearfix
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-1.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-2.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-1.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-2.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-1.png", alt="")
+							.col-xs-6.col-sm-4.col-md-2
+								.logos__item
+									a(href="#")
+										img(src="images/logo-2.png", alt="")
+					include jade/foo.jade
+		include jade/scripts.jade

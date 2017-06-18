@@ -1,0 +1,70 @@
+.breadcrumbs.clearfix
+	.row
+		.col-xs-12
+			ul.breadcrumbs__container
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#s")
+						| Главная
+				li.breadcrumbs__item
+					| Документы
+mixin document-item(cat, title, dot)
+	.document-item
+		a.document-item__pr.fancy(href="images/doc.jpg")
+			img(src="images/doc.jpg", alt="")
+		.document-item__text
+			.document-item__category(class="document-item__category_dot_" + dot)
+				a(href="#")
+					| #{cat}
+			.document-item__title
+				a(href="#")
+					| #{title}
+			.document-item__info.clearfix
+				.document-item__size
+					| Файл: document.docx (3,5 Мб)
+				.document-item__date
+					| Загружен 30.06.2016 в 11:23
+
+.document.clearfix
+	.row
+		.col-xs-12
+			h2.document__title
+				| Поиск документов
+	form(action="")
+		.row
+			.col-xs-12.col-sm-6
+				select.select.select_block.document__select
+					option(val="", selected)
+						| Название документа
+					option(val="0")
+						| 123
+			.col-xs-12.col-sm-6
+				select.select.select_block.document__select
+					option(val="", selected)
+						| Раздел сайта
+					option(val="0")
+						| 123
+		.row
+			.col-xs-12.col-sm-6
+				select.select.select_block.document__select
+					option(val="", selected)
+						| Тип документа
+					option(val="0")
+						| 123
+			.col-xs-12.col-sm-6
+				input.input.select_block.document__select.input--date-range(placeholder="Дата")
+		.row
+			.col-xs-12
+				.document__buttons
+					button.button.button_reverse.document__button(type="reset")
+						| Сбросить
+					a.button.document__button(href="#")
+						| Применить
+	.row
+		.col-xs-12
+			.document__result
+				+document-item("Профессиональные стандарты / Нормативные документы", "Правила разработки, утверждения и применения профессиональных стандартов (утверждены Постановлением Правительства Российской Федерации от 22.01.2013 N 23 (ред. от 23.09.2014))", "red")
+				+document-item("Профессионально-общественная аккредитация", "Комплексный план мероприятий по разработке профессиональных стандартов, их независимой профессионально-общественной экспертизе и применению на 2014 — 2016 годы", "blue")
+				+document-item("Профессиональные стандарты / Нормативные документы", "Правила разработки, утверждения и применения профессиональных стандартов (утверждены Постановлением Правительства Российской Федерации от 22.01.2013 N 23 (ред. от 23.09.2014))", "red")
+				+document-item("Профессионально-общественная аккредитация", "Комплексный план мероприятий по разработке профессиональных стандартов, их независимой профессионально-общественной экспертизе и применению на 2014 — 2016 годы", "blue")
+				+document-item("Профессиональные стандарты / Нормативные документы", "Правила разработки, утверждения и применения профессиональных стандартов (утверждены Постановлением Правительства Российской Федерации от 22.01.2013 N 23 (ред. от 23.09.2014))", "red")
+				+document-item("Профессионально-общественная аккредитация", "Комплексный план мероприятий по разработке профессиональных стандартов, их независимой профессионально-общественной экспертизе и применению на 2014 — 2016 годы", "blue")

@@ -1,0 +1,45 @@
+mixin contacts-item(pr, title, subtitle)
+	.contacts-item
+		.contacts-item__pr
+			a(href="#")
+				img(src="images/contacts-item-pr-" + pr + ".jpg", alt=title, width="150", height="150")
+		.contacts-item__info
+			.contacts-item__title
+				a(href="#")
+					| #{title}
+			.contacts-item__subtitle
+				| #{subtitle}
+			.contacts-item__desc
+				| e-mail: nark@rspp.ru
+				br
+				| тел./факс: +7 (499) 152-63-31
+
+.contacts
+	.container
+		.row
+			.col-xs-12
+				h2.contacts__title
+					| Сотрудники
+		.row
+			.col-xs-12.col-md-6
+				+contacts-item(1, "Шохин Александр Николаевич" , "Президент Общероссийской общественной ...")
+			.col-xs-12.col-md-6
+				+contacts-item(3, "Кузьминов Ярослав Иванович" , "Ректор федерального государственного ...")
+		.row
+			.col-xs-12.col-md-6
+				+contacts-item(2, "Лейбович Александр Наумович" , "Генеральный директор Автономной ...")
+			.col-xs-12.col-md-6
+				+contacts-item(4, "Свинаренко Андрей Геннадьевич" , "Заместитель Председателя правления ООО ... ")
+		.row
+			.col-xs-12.col-md-6
+				+contacts-item(3, "Кузьминов Ярослав Иванович" , "Ректор федерального государственного ...")
+			.col-xs-12.col-md-6
+				+contacts-item(1, "Шохин Александр Николаевич" , "Президент Общероссийской общественной ...")
+		.row
+			.col-xs-12.col-md-6
+				+contacts-item(4, "Свинаренко Андрей Геннадьевич" , "Заместитель Председателя правления ООО ... ")
+			.col-xs-12.col-md-6
+				+contacts-item(2, "Лейбович Александр Наумович" , "Генеральный директор Автономной ...")
+		.row
+			.col-xs-12.col-md-6
+				+contacts-item(1, "Шохин Александр Николаевич" , "Президент Общероссийской общественной ...")

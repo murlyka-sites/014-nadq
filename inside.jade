@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		include jade/head.jade
+		title Внутреняя
+	body
+		.container
+			.row
+				.wrapper.clearfix
+					include jade/header.jade
+					.clearfix.wrapper__flex
+						.col-xs-12.col-md-9.wrapper__flex-row.wrapper__flex-row_order_1
+							.wrapper__main
+								include jade/inside.jade
+						.col-xs-12.col-md-3.wrapper__flex-row
+							.wrapper__aside.aside.clearfix
+								.aside-list
+									.aside-list__item
+										a.aside-list__link(href="#")
+											| Документы 
+									.aside-list__item
+										a.aside-list__link(href="#")
+											| Организации
+									.aside-list__item.aside-list__item_active
+										a.aside-list__link(href="#")
+											| Как стать центром аккредитации
+					include jade/foo.jade
+		include jade/scripts.jade
